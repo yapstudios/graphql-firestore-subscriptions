@@ -15,6 +15,9 @@ export class PubSub implements PubSubEngine {
   private nextSubscriptionId: number = 0;
   private subscriptions: Map<number, Unsubscribe> = new Map();
 
+  public constructor() {
+  }
+
   private getNextSubscriptionId(): number {
     this.nextSubscriptionId += 1;
     return this.nextSubscriptionId;
